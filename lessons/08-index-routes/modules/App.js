@@ -1,6 +1,6 @@
 import React from 'react'
 import NavLink from './NavLink'
-
+import Home from './Home'
 export default React.createClass({
   render() {
     return (
@@ -10,7 +10,8 @@ export default React.createClass({
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/repos">Repos</NavLink></li>
         </ul>
-        {this.props.children}
+        {this.props.children || <Home/>}
+        {/*{this.props.children}*/}
       </div>
     )
   }
